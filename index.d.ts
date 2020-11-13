@@ -10,3 +10,5 @@ declare module '@vue/runtime-core' {
       $modal: Modals
     }
 }
+
+export default Vue3Modals;
