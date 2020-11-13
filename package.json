@@ -2,7 +2,6 @@
   "name": "vue3-modals",
   "version": "0.1.0",
   "main": "dist/Vue3Modals.common.js",
-  "private": true,
   "scripts": {
     "serve": "vue-cli-service serve ./demo/main.ts",
     "build": "vue-cli-service build --target lib --name Vue3Modals src/index.ts",
@@ -28,5 +27,21 @@
     "node-sass": "^4.12.0",
     "sass-loader": "^8.0.2",
     "typescript": "~3.9.3"
-  }
+  },
+  "description": "## Project setup ``` npm install ```",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/planir/vue3-modal.git"
+  },
+  "keywords": [
+    "modals",
+    "vue",
+    "vue3"
+  ],
+  "author": "Planir <planir11@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/planir/vue3-modal/issues"
+  },
+  "homepage": "https://github.com/planir/vue3-modal#readme"
 }
