@@ -28,9 +28,12 @@
     ]
   },
   "include": [
+    "index.d.ts",
     "src/**/*.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
+    "demo/**/*.ts",
+    "demo/**/*.vue",
     "tests/**/*.ts",
     "tests/**/*.tsx"
   ],
