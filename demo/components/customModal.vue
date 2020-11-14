@@ -1,18 +1,20 @@
 <template>
     <modal>
         <span>CUSTOM STYLES</span>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo amet laboriosam magnam aliquam vel. Beatae nihil, eum, dolore nostrum ipsum labore obcaecati exercitationem ducimus assumenda necessitatibus voluptatibus aut eveniet iusto.
+        {{message}}
         <button @click="closeMe">Close me</button>
     </modal>
 </template>
 
 <script lang="ts">
-import {Vue} from "vue-class-component";
+import {Vue, prop} from "vue-class-component";
 
-export default class CustomModal extends Vue {
-    /**
-     * 
-     */
+class Props {
+    message = prop<string>({default: 'test'})
+}
+
+export default class CustomModal extends Vue.props(Props) {
+    
     closeMe() {
         this.$emit('close');
     }

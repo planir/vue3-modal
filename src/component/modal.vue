@@ -5,11 +5,12 @@
 </template>
 
 <script lang="ts">
-import {Vue} from "vue-class-component";
+import {Options, Vue} from "vue-class-component";
 
-export default class Modal extends Vue {
-
-}
+@Options({
+    events: ["close"]
+})
+export default class Modal extends Vue {}
 </script>
 
 <style lang="scss" scoped>

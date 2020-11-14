@@ -6,6 +6,7 @@
                     v-for="modal in modals"
                     :is="modal.component"
                     :key="modal.id"
+                    v-bind="modal.props"
                     @close="closeModal(modal.id)"
                 />
             </div>
@@ -21,6 +22,7 @@ import emitter from "./configuration/emitter";
 interface Modal {
     id: number;
     component: App<Element>;
+    props: any;
 }
 
 export default class ModalsComponent extends Vue {
@@ -32,12 +34,13 @@ export default class ModalsComponent extends Vue {
      */
     created() {
         // Add to modals when "add-modal" event is fired.
-        emitter.on("add-modal", component => {
+        emitter.on("add-modal", e =>
             this.modals.push({
                 id        : this.modalIndex++,
-                component : component
-            });
-        });
+                component : e.element,
+                props     : e.props
+            })
+        );
     }
 
     mounted() {

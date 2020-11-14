@@ -1,4 +1,3 @@
-import { App } from 'vue';
 import emitter from "./configuration/emitter";
 import IModals from './interfaces/Modals';
 
@@ -11,8 +10,10 @@ class ModalsClass implements IModals {
      * 
      * @param {App} element - Modal element.
      */
-    show(element: any) {
-        emitter.emit('add-modal', element);
+    show(element: any, props: any = {}) {
+        emitter.emit('add-modal', {
+            element, props
+        });
     }
 }
 
