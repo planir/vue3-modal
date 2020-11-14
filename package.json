@@ -1,6 +1,6 @@
 {
   "name": "vue3-modals",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "dist/Vue3Modals.common.js",
   "scripts": {
     "serve": "vue-cli-service serve ./demo/main.ts",
